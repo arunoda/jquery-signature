@@ -12,7 +12,7 @@
 			var cnt = 0;
 
 			var pastTarget = null;
-			$('#find div').mousemove(function(e) {
+			$('#find div').click(function(e) {
 
 				if(pastTarget != e.target) {
 
@@ -43,6 +43,7 @@
 </head>
 <body>
 
+	<h3>Click on some element</h3>
 	<div id='find'>
 		<div id='data'></div>
 		<div id='hello'>
