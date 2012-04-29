@@ -18,16 +18,20 @@
 			var index = $(e).index();
 
 			if(id) {
-				signature = "#" + id + ":nth-child(" + (index + 1) + ") " + signature;
+				signature = "#" + id + " " + signature;
 			} else if(clas) {
-				signature = '.' + clas + ":nth-child(" + (index + 1) + ") " + signature;
+				signature = '.' + clas + " " + signature;
 			} else if(type != 'HTML') {
 	
-				signature = type.toLowerCase() + ":nth-child(" + (index + 1) + ") " + signature;
+				if(llc==0) {
+					signature = type.toLowerCase() + ":nth-child(" + (index + 1) + ") " + signature;
+				} else {
+					signature = type.toLowerCase() + " " + signature;
+				}
 			}
 		}
 
-		return signature;
+		return signature.trim();
 	};
 
 })( jQuery );
