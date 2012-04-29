@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src='jquery.min.js'></script>
+	<script type="text/javascript" src='../jquery.signature.js'></script>
+	<script type="text/javascript">
+
+		var prev = null
+		
+		$(function() {
+
+			var cnt = 0;
+
+			var pastTarget = null;
+			$('#find div').mousemove(function(e) {
+
+				if(pastTarget != e.target) {
+
+					if(pastTarget) $(pastTarget).css('border', '0px');
+					$(e.target).css('border', '2px solid green');
+
+					pastTarget = e.target;
+					$('#show-sig .sig').html($(e.target).signature());
+
+				}
+
+			});
+
+		});
+
+	</script>
+	<style type="text/css">
+		.go div {
+			width: 400px;
+			height: 100px;
+		}
+
+		#hello {
+			margin: 20px 0px 40px 200px;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div id='find'>
+		<div id='data'></div>
+		<div id='hello'>
+			<div class='go'>
+				<div>Go Here</div>
+				<div>Go Here2</div>
+			</div>
+			<div id='bbg'>
+				Go to hell
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<pre>
+			<code id='show-sig'>
+
+				var signature = "<span class='sig'></span>"
+				
+				//can be get this by
+
+				$('<span class="sig"></span>')
+			</code>
+		</pre>
+	</div>
+</body>
+</html>
