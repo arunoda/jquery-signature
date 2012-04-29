@@ -23,7 +23,7 @@
 			}
 
 			if(id) {
-				signature = "#" + id + " " + signature;
+				signature = "#" + id + combinator + signature;
 			} else if(clas) {
 				signature = '.' + clas + combinator + signature;
 			} else if(type != 'HTML') {
