@@ -38,7 +38,7 @@ function showEl() {
 }
 ~~~
 
-### Licence
+## License
 The MIT License
 
 Copyright (c) 2012 Arunoda Susiripala
