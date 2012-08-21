@@ -24,7 +24,9 @@
 
 			if(id) {
 				signature = "#" + id + combinator + signature;
-			} else if(clas) {
+			} else if(clas && clas.trim() != "") {
+				//fix for more than one class in a div
+				clas = clas.trim().split(' ')[0];
 				signature = '.' + clas + combinator + signature;
 			} else if(type != 'HTML') {
 	
