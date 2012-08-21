@@ -22,8 +22,8 @@
 				combinator = ":nth-child(" + (index + 1) + ") "
 			}
 
-			if(id) {
-				signature = "#" + id + combinator + signature;
+			if(id && id.trim() != "") {
+				signature = "#" + id.trim() + combinator + signature;
 			} else if(clas && clas.trim() != "") {
 				//fix for more than one class in a div
 				clas = clas.trim().split(' ')[0];
